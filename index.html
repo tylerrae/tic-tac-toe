@@ -5,9 +5,16 @@
     <link rel="stylesheet" href="style.css">
   </head>
   <body>
-    <svg id="game-board" width="80%" viewBox="0 0 300 300">
-      <!-- Create all the shapes for your game board here! -->
-
+    <svg id="game-board" width="49%" viewBox="0 0 300 300">
+     <rect x="0" y="0" width="100" height="100" fill="#ffcc99" onclick="topLeft()"/>
+     <rect x="102" y="0" width="100" height="100" fill="#ffcc99" onclick="topMiddle()"/>
+     <rect x="204" y="0" width="100" height="100" fill="#ffcc99" onclick="topRight()"/>
+     <rect x="0" y="102" width="100" height="100" fill="#ffcc99" onclick="middleLeft()"/>
+     <rect x="102" y="102" width="100" height="100" fill="#ffcc99" onclick="middleMiddle()"/>
+     <rect x="204" y="102" width="100" height="100" fill="#ffcc99" onclick="middleRight()"/>
+     <rect x="0" y="204" width="100" height="100" fill="#ffcc99" onclick="bottomLeft()"/>
+     <rect x="102" y="204" width="100" height="100" fill="#ffcc99" onclick="bottomMiddle()"/>
+     <rect x="204" y="204" width="100" height="100" fill="#ffcc99" onclick="bottomRight()"/>
     </svg>
 
     <!-- This line of code points to your JavaScript file. No need to touch it. -->
