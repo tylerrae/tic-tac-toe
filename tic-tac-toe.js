@@ -2,10 +2,11 @@
 // You can use the namespace variable that's defined here.
 var namespace = "http://www.w3.org/2000/svg"
 
-var changePlayer = "circle"
 var topLeftClicked = 0
+var changePlayer = "circle"
 function topLeft() {
-  if (changePlayer == "circle") {
+if (topLeftClicked == 0) {
+   if (changePlayer == "circle") {
     var circle = document.createElementNS(namespace,"circle")
 circle.setAttribute("cx", 50)
 circle.setAttribute("cy", 50)
@@ -15,6 +16,7 @@ circle.setAttribute("fill-opacity", 1)
 var canvas = document.getElementById("game-board")
   canvas.appendChild(circle)
   changePlayer = "rect"
+  topLeftClicked = 1
 }  else {
     var rect = document.createElementNS(namespace, "rect")
     rect.setAttribute("x", 50)
@@ -25,14 +27,15 @@ var canvas = document.getElementById("game-board")
     var canvas = document.getElementById("game-board")
     canvas.appendChild(rect)
     changePlayer = "circle"
-  } else if (topLeftClicked == 0) {
     topLeftClicked = 1
+  }
 }
 }
 
 
 var topMiddleClicked = 0
 function topMiddle() {
+  if (topMiddleClicked == 0) {
   if (changePlayer == "circle") {
     var circle = document.createElementNS(namespace,"circle")
 circle.setAttribute("cx", 150)
@@ -42,6 +45,7 @@ circle.setAttribute("fill", "white")
   var canvas = document.getElementById("game-board")
   canvas.appendChild(circle)
   changePlayer = "rect"
+  topMiddleClicked = 1
 } else {
     var rect = document.createElementNS(namespace, "rect")
     rect.setAttribute("x", 150)
@@ -51,14 +55,15 @@ circle.setAttribute("fill", "white")
     rect.setAttribute("fill", "purple")
     var canvas = document.getElementById("game-board")
     canvas.appendChild(rect)
-    changePlayer = "circle" }
- else if (topMiddleClicked == 0) {
+    changePlayer = "circle"
     topMiddleClicked = 1
   }
 }
+}
 
-
+var topRightClicked = 0
 function topRight() {
+  if (topRightClicked == 0) {
   if (changePlayer == "circle") {
     var circle = document.createElementNS(namespace,"circle")
 circle.setAttribute("cx", 250)
@@ -68,6 +73,7 @@ circle.setAttribute("fill", "white")
   var canvas = document.getElementById("game-board")
   canvas.appendChild(circle)
   changePlayer = "rect"
+  topRightClicked = 1
 } else {
     var rect = document.createElementNS(namespace, "rect")
     rect.setAttribute("x", 250)
@@ -77,14 +83,10 @@ circle.setAttribute("fill", "white")
     rect.setAttribute("fill", "purple")
     var canvas = document.getElementById("game-board")
     canvas.appendChild(rect)
-    changePlayer = "circle" }
-}
-
-var topRightClicked = 0
-function makeShape() {
-  if (topRightClicked == 0) {
+    changePlayer = "circle"
     topRightClicked = 1
   }
+}
 }
 
 function middleLeft() {
