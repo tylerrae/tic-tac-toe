@@ -9,7 +9,6 @@ function startGame() {
   document.getElementById("p3").setAttribute("style", "display: none;")
   document.getElementById("button1").setAttribute("style","display: none;")
   document.getElementById("button2").setAttribute("style","display: block;")
-  document.getElementById("everything").setAttribute("style","display: none;")
 }
 
 function resetGame() {
